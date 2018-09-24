@@ -3,8 +3,18 @@ Useful things that are easy to forget when setting up my ideal mac os dev enviro
 
 ## iTerm
 
-How to setup my preferred way of moving forward and back characters as well as restoring page forward and back in vim
-![image](https://user-images.githubusercontent.com/3334671/45964183-12502300-bff3-11e8-87d0-b2549c1db1df.png)
+How to setup my preferred keybindings
+
+| Keys         | Usage                             |
+|--------------|:---------------------------------:|
+| ctrl+f       | Move one word forward             |
+| ctrl+b       | Move one word backwards           |
+| ctrl+opt+del | delete word                       |
+| ctrl+cmd+del | delete line                       |
+| opt+b        | Send ctrl+b (page back in vim)    |
+| opt+f        | Send ctrl+f (page forward in vim) |
+
+![image](https://user-images.githubusercontent.com/3334671/45964556-25afbe00-bff4-11e8-9f3d-81efa2dce6c0.png)
 
 ## Git setup in .bash_profile
 Setup the prompt and also a shortcut for throwing a commit back into the prior commit (although it's better to just not commit the next bit and do the amend)
