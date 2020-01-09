@@ -16,7 +16,7 @@ How to setup my preferred keybindings
 
 ![image](https://user-images.githubusercontent.com/3334671/45964556-25afbe00-bff4-11e8-9f3d-81efa2dce6c0.png)
 
-## Git setup in .bash_profile
+## Git setup in .bash_profile (and some misc java aliases)
 Setup the prompt and also a shortcut for throwing a commit back into the prior commit (although it's better to just not commit the next bit and do the amend)
 
 ```
@@ -25,9 +25,15 @@ Setup the prompt and also a shortcut for throwing a commit back into the prior c
 GIT_PS1_SHOWDIRTYSTATE=true
 
 alias git-push="git push -u origin HEAD"
+alias mvn-stacks="mvn -DtrimStackTrace=false "
+alias jshell="/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/bin/jshell"
 
 git-squash-into-last() {
 	git reset --soft HEAD~1
+	git commit --amend --no-edit
+}
+
+git-quick-squash() {
 	git commit --amend --no-edit
 }
 
