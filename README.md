@@ -37,6 +37,16 @@ git-quick-squash() {
 	git commit --amend --no-edit
 }
 
+git-rebase-master() {
+	curbran=$(git rev-parse --abbrev-ref HEAD)
+	git stash
+	git checkout master
+	git pull
+	git checkout $curbran
+	git stash pop
+	git rebase master
+}
+
 gb() {
 	echo -n ' [' && git branch 2>/dev/null | grep "^*" | colrm 1 2 | tr -d '\n' && echo -n ']'
 }
